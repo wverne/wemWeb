@@ -3,3 +3,5 @@
 
 A web interface for [wem](https://github.com/wverne/wem), implemented 
 using django.
+
+Compile wem (submodule) using make before running.

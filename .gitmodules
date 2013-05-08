@@ -1,0 +1,3 @@
+[submodule "wem"]
+	path = wem
+	url = git://github.com/wverne/wem.git

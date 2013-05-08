@@ -4,7 +4,8 @@ from django.conf.urls import patterns, include, url
 # from django.contrib import admin
 # admin.autodiscover()
 
-urlpatterns = patterns('',
+urlpatterns = patterns('wemWeb.views',
+    (r'^$', 'home_view'),
     # Examples:
     # url(r'^$', 'wemWeb.views.home', name='home'),
     # url(r'^wemWeb/', include('wemWeb.foo.urls')),
