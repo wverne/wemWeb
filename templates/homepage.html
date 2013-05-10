@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<p class="lead">
+  This is web interface for 
+  <strong><a href="http://github.com/wverne/wem">wem</a></strong> 
+  (Wesley's Exoplanet Modeler), a set of programs for modeling the 
+  properties of solid exoplanets.
+</p>
+
+<p>
+  wem consists of three executables, two of which can be run using this 
+  web interface:
+  <ul>
+    <li>
+      <h3>wemEP: Exoplanet Profiler</h3>
+      <p>
+	Generates profiles of individual exoplanets, consisting of pressure,
+	density, and interior mass with respect to radius.  A core equation of
+	state (EOS) must be given and any number of additional EOS layers 
+	(specified by the mass fraction at which they begin) may be added.
+      </p>
+    </li>
+    <li>
+      <h3>wemMR: Mass-Radius Plot Generator</h3>
+      <p>
+	Generates mass-radius plots for a given composition, consisting of 
+	radius, central pressure, central density, energy data (gravitational
+	and mechanical), and moment of inertia coefficient.  The same equation
+	of state specifications as in wemEP may be made, and a mass range and
+	interval may be specified.
+      </p>
+    </li>
+  </ul>
+</p>
+{% endblock %}

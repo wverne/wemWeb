@@ -6,6 +6,7 @@ from django.conf.urls import patterns, include, url
 
 urlpatterns = patterns('wemWeb.views',
     (r'^$', 'home_view'),
+
     # Examples:
     # url(r'^$', 'wemWeb.views.home', name='home'),
     # url(r'^wemWeb/', include('wemWeb.foo.urls')),
@@ -15,4 +16,9 @@ urlpatterns = patterns('wemWeb.views',
 
     # Uncomment the next line to enable the admin:
     # url(r'^admin/', include(admin.site.urls)),
+)
+
+urlpatterns += patterns('modeling.views',
+    (r'^wemEP/$', 'wemEP_view'),
+    (r'^wemMR/$', 'wemMR_view'),
 )

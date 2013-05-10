@@ -24,7 +24,8 @@
 	<div class="container">
 	  <a class="brand" href="/">wemWeb</a>
 	  <ul class="nav">
-	    <li><a href="/">Home</a></li>
+	    <li><a href="/wemEP/">Exoplanet Profiler</a></li>
+	    <li><a href="/wemMR/">Mass-Radius</a></li>
 	  </ul>
 	</div> <!-- container -->
       </div> <!-- navbar-inner -->
@@ -34,8 +35,16 @@
 
       <h1>{% block header %}Wesley's Exoplanet Modeler{% endblock %}</h1>
 
+      <hr>
+
       {% block content %}
       <p>This is the template page!</p>
+      {% endblock %}
+
+      <hr>
+
+      {% block footer %}
+      <p class="text-right">wemWeb - Wesley Verne</p>
       {% endblock %}
 
     </div> <!-- container -->

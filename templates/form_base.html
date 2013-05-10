@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row">
+  <div class="span6">
+    <div class="well">
+
+      {% if results %}
+      <p class="text-success lead">Your results are below!</p>
+      {% endif %}
+
+      {% if form.errors %}
+      <p style="color: red;">
+        Please correct the error{{ form.errors|pluralize }} below.
+      </p>
+      {% endif %}
+
+      <form action="" method="post" class="form-horizontal">
+
+	{% block form_body %}
+	<p>Form goes here!</p>
+	{% endblock %}
+
+        {% csrf_token %}
+	<div class="control-group">
+	  <label class="control-label"></label>
+	  <div class="controls">
+	    <button type="submit" name="signingup" 
+		    class="btn btn-success">Calculate</button>
+	  </div> <!-- controls -->
+	</div> <!-- control-group -->
+
+      </form>
+
+    </div> <!-- well -->
+  </div> <!-- span6 -->
+
+  <div class="span6">
+
+    <h3>EOS Numbers:</h3>
+    <dl class="dl-horizontal">
+      <dt>1</dt>
+      <dd>Fe (epsilon) Vinet (Daewaele et al. 2006)</dd>
+      <dt>2</dt>
+      <dd>MgSiO3 (pv) Vinet (Tsuchiya et al. 2004)</dd>
+      <dt>3</dt>
+      <dd>MgO (periclase) BME3 (Speziale et al. 2001)</dd>
+      <dt>4</dt>
+      <dd>SiC (ZB + RS) BME3 (Lu et al. 2008)</dd>
+      <dt>5</dt>
+      <dd>Diamond Vinet (Kunc et al. 2003)</dd>
+      <dt>6</dt>
+      <dd>Platinum Vinet (Sun et al. 2008)</dd>
+      <dt>7</dt>
+      <dd>H2O Ice VII Vinet (Wolanin et al. 1997)</dd>
+    </dl>
+    <dl class="dl-horizontal">
+      <dt>0</dt>
+      <dd>Fe (epsilon) BME3 (Daewaele et al. 2006)</dd>
+      <dt>-1</dt>
+      <dd>white dwarf polytrope (Chandrasekhar)</dd>
+      <dt>-2</dt>
+      <dd>Platinum BME4 (Sun et al. 2008)</dd>
+      <dt>-3</dt>
+      <dd>H2O Ice VII BME3 (Wolanin et al. 1997)</dd>
+      <dt>-4</dt>
+      <dd>Fe Vinet (Seager et al. 2007)</dd>
+      <dt>-5</dt>
+      <dd>MgSiO3 (pv) 4th order BME (Seager at al. 2007)</dd>
+      <dt>-6</dt>
+      <dd>Fe TFD (Salpeter & Zapolsky 1967)</dd>
+      <dt>-7</dt>
+      <dd>n=1 polytrope</dd>
+    </dl>
+
+  </div> <!-- span6 -->
+</div> <!-- row -->
+
+{% if results %}
+<hr>
+{{ results }}
+{% endif %}
+
+{% endblock %}

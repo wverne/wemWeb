@@ -1,0 +1,97 @@
+{% extends "form_base.html" %}
+
+{% block title %}{{ block.super }} - wemMR {% endblock %}
+
+{% block header %}{{ block.super }} - wemMR {% endblock %}
+
+{% block form_body %}
+<div class="control-group">
+  {{ form.central_eos.errors }}
+  <label class="control-label">Central EOS</label>
+  <div class="controls">
+    <div class="input">
+      {{ form.central_eos }}
+    </div> <!-- input-prepend -->
+  </div> <!-- controls -->
+</div> <!-- control-group -->
+
+<div class="control-group">
+  {{ form.l2_eos.errors }}
+  <label class="control-label">Layer 2 EOS (optional)</label>
+  <div class="controls">
+    <div class="input">
+      {{ form.l2_eos }}
+    </div> <!-- input -->
+  </div> <!-- controls -->
+</div> <!-- control-group -->
+
+<div class="control-group">
+  {{ form.l2_massfrac.errors }}
+  <label class="control-label">Layer 2 Mass Fraction</label>
+  <div class="controls">
+    <div class="input">
+      {{ form.l2_massfrac }}
+    </div> <!-- input -->
+  </div> <!-- controls -->
+</div> <!-- control-group -->
+
+<div class="control-group">
+  {{ form.l3_eos.errors }}
+  <label class="control-label">Layer 3 EOS (optional)</label>
+  <div class="controls">
+    <div class="input">
+      {{ form.l3_eos }}
+    </div> <!-- input -->
+  </div> <!-- controls -->
+</div> <!-- control-group -->
+
+<div class="control-group">
+  {{ form.l3_massfrac.errors }}
+  <label class="control-label">Layer 3 Mass Fraction</label>
+  <div class="controls">
+    <div class="input">
+      {{ form.l3_massfrac }}
+    </div> <!-- input -->
+  </div> <!-- controls -->
+</div> <!-- control-group -->
+
+<div class="control-group">
+  {{ form.start_mass.errors }}
+  <label class="control-label">Start Mass (Earth Masses)</label>
+  <div class="controls">
+    <div class="input">
+      {{ form.start_mass }}
+    </div> <!-- input -->
+  </div> <!-- controls -->
+</div> <!-- control-group -->
+
+<div class="control-group">
+  {{ form.end_mass.errors }}
+  <label class="control-label">End Mass (Earth Masses)</label>
+  <div class="controls">
+    <div class="input">
+      {{ form.end_mass }}
+    </div> <!-- input -->
+  </div> <!-- controls -->
+</div> <!-- control-group -->
+
+<div class="control-group">
+  {{ form.interval.errors }}
+  <label class="control-label">Plot Mass Interval</label>
+  <div class="controls">
+    <div class="input">
+      {{ form.interval }}
+    </div> <!-- input -->
+  </div> <!-- controls -->
+</div> <!-- control-group -->
+
+<div class="control-group">
+  {{ form.step.errors }}
+  <label class="control-label">Step Size (meters)</label>
+  <div class="controls">
+    <div class="input">
+      {{ form.step }}
+    </div> <!-- input -->
+  </div> <!-- controls -->
+</div> <!-- control-group -->
+{% endblock %}
